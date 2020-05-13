@@ -1,0 +1,51 @@
+/*@import url('http://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+*/
+*{margin-top: 0;
+padding-top: 0;
+box-sizing: border-box;
+font-family: 'Poppins',sans-serif;}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: black;
+}
+.container{
+	position: relative;
+}
+.container p{
+	position: absolute;
+	color: white;
+	transform: translate(-50%,-50%);
+	font-size: 400px;
+	font-style: bold;
+}
+.container p:nth-child(1)
+{
+	color: transparent;
+	-webkit-text-stroke: 3px blue;
+}
+.container p:nth-child(2)
+{
+	color: lightblue;
+	animation: animate 4s ease-in-out infinite;
+	
+}
+@keyframes animate{
+	0%,100%{
+		clip-path: polygon(0% 32%, 7% 39%, 15% 50%, 23% 60%, 34% 64%, 48% 60%, 60% 52%, 70% 44%, 78% 33%, 92% 30%, 100% 32%, 100% 100%, 1% 99%);
+	 animation-delay: 0.3s;}
+	25%{
+		clip-path: polygon(0% 39%, 8% 37%, 21% 34%, 30% 34%, 39% 38%, 47% 43%, 56% 51%, 62% 59%, 70% 63%, 81% 69%, 93% 67%, 98% 62%, 99% 100%, 1% 100%);
+	animation-delay: 0.3s;}
+	50%{
+		clip-path: polygon(1% 66%, 13% 70%, 26% 75%, 42% 74%, 53% 71%, 63% 63%, 63% 63%, 76% 53%, 85% 44%, 96% 41%, 99% 40%, 100% 98%, 0% 100%);
+	animation-delay: 0.3s;}
+	75%{
+		clip-path: polygon(0% 39%, 11% 36%, 22% 35%, 31% 38%, 36% 44%, 43% 49%, 51% 54%, 61% 60%, 74% 66%, 86% 64%, 96% 58%, 100% 55%, 100% 100%, 0% 100%);
+	animation-delay: 0.3s;}
+
+}
+
