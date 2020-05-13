@@ -12,6 +12,13 @@ body{
 	align-items: center;
 	justify-content: center;
 }
+
+p{
+	font-size: 150px;
+	margin-left: 50px;
+	font-style: italic;
+	
+}
 .cont{
 	position: relative;
 	width: 250px;
