@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eye movement</title>
+	<style>
+		body{
+			background-color: darkblue;
+			}
+			.all{position: absolute;
+
+				height: 300px;
+				width: 300px;
+				margin-top: 10%;
+				margin-left: 35%;
+				color: white;
+				background-color: yellow;
+				border-radius: 50%;
+				border-style: solid;
+				border-color: 2px black;
+				box-shadow: 2px;
+			}
+			.ball{position: absolute;
+				height: 36%;
+				width: 30%;
+				color: white;
+			    margin-left: 50px;
+			    margin-top: 55px;
+				background-color: white;
+				border-radius: 50%;
+			}
+			.ball2{position: absolute;
+				height: 36%;
+				width: 30%;
+				color: white;
+			    margin-left: 160px;
+			    margin-top: 55px;
+				background-color: white;
+				border-radius: 50%;
+			}
+			.eye{
+				position: absolute;
+				background-color: black;
+				height: 35%;
+				width: 35%;
+				overflow: hidden;
+				margin-top: 10%;
+				margin-left: 10%;
+				border-radius: 40%;
+			}
+			.mouth{
+				content:' ';
+				position: absolute;
+				top: 200px;
+				margin-left: 74px;
+				background-color: brown;
+				border-bottom-left-radius: 90px;
+				border-bottom-right-radius: 90px;
+				
+				transform: 0.5s;
+				height: 60px;
+				width: 150px;
+
+			}
+			.mouth:hover{content:' ';
+				position: absolute;
+				top: 210px;
+				margin-left: 72px;
+				background-color: brown;
+				border-bottom-left-radius: 0px;
+				border-bottom-right-radius: 0px;
+				
+				transform: 0.5s;
+				height: 10px;
+				width: 150px;
+
+			}
+			.all:hover{
+
+				height: 300px;
+				width: 300px;
+				margin-top: 10%;
+				margin-left: 35%;
+				background: linear-gradient(to bottom, red, yellow);
+				border-radius: 50%;
+				border-style: solid;
+				border-color: 2px black;
+				box-shadow: 2px;
+
+			}
+			h2{
+				font-size: 60px;
+				color: white;
+			}
+	</style>
+</head>
+<body>
+	<div class="all">
+		<div >
+			<div class="ball">
+				<div class="eye">
+				</div>
+			</div>
+			<div class="ball2">
+				<div class="eye">
+				</div>
+			</div>
+			<div class="mouth"><p></div>
+		</div>
+	</div>
+	<h2><center><b><u>EYE MOVEMENT</u></b></center>
+<script>
+	var ball = document.getElementsByClassName("eye");
+	document.onmousemove = function(){
+		var x= event.clientX *55/window.innerWidth +"%";
+		var y= event.clientY *55/window.innerHeight +"%";
+
+		for(i=0;i<2;i++){
+			ball[i].style.left = x;
+			ball[i].style.top = y;
+			
+		}
+	}
+</script>
+
+</body>
+</html>
